@@ -13,17 +13,24 @@
     body {
       color: rgb(253, 92, 77);
       background-color: rgba(0, 255, 106, 0.58);
+
+    }
+    li{
+        text-transform: capitalize;
     }
   </style>
+  <ul>
   <% for (let i = 0; i < allDrinks.length; i++) { %>  
-    <p>
+    <li>
         <a href="/drinks/<%= i %>">
         <%= allDrinks[i].name %>
         </a>
-    </p> 
+    </li> 
+    
 
 
 <% } %>
+</ul>
 
 </body>
 </html>

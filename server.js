@@ -16,9 +16,10 @@ app.get('/drinks', (req, res) => {
     res.render('drinks_index.ejs', {allDrinks: drinks});
 });
 
+//show route
 app.get('/drinks/:id', (req,res) => {
     res.send(req.params.id);
-})
+});
 
 
 
