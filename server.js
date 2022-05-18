@@ -1,28 +1,28 @@
 const express = require('express');
 const app = express();
-const drinks = require('./models/drinks')
+const food = require('./models/food')
 
 app.get('/', (req, res) => {  
     res.send('Welcome to the Gitpub App');
 });
 // Index View to show drink data
-app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs', {allDrinks: drinks});
+app.get('/food/', (req, res) => {
+    res.render('drinks_index.ejs', {allFood: food});
 });
 // Show Route
 // app.get('/drinks/:id', (req, res) => {
 //     res.send(req.params.id);
 //     });
 // adding jpg
-app.get('/drinks/:id', (req, res) => {
+app.get('/food/:id', (req, res) => {
     res.render('drinks_show.ejs', {
-        allDrinks: drinks[req.params.id]
+        allFood: food[req.params.id]
     });
     });
 
 //  linking data
-app.get('/drinks/:id', (req, res) => {
-    res.render('drinks_show.ejs', {drink: drinks[req.params.id]});
+app.get('/food/:id', (req, res) => {
+    res.render('drinks_show.ejs', {allFood: food[req.params.id]});
 });
 
 
